@@ -10,9 +10,9 @@ angle = 0
 blocks = 0
 for v in inp:
     angle += 90 if 'R' in v else -90
-    p[0] +=  math.sin(math.radians(angle % 360)) * getDigits(v)
-    p[1] +=  math.cos(math.radians(angle % 360)) * getDigits(v)
+    p[0] +=  round(math.sin(math.radians(angle % 360))) * getDigits(v)
+    p[1] +=  round(math.cos(math.radians(angle % 360))) * getDigits(v)
     blocks = abs(0-p[0]) + abs(0-p[1])
 
-print "You are {} blocks away ".format(int(b))
+print "You are {} blocks away ".format(int(blocks))
 
